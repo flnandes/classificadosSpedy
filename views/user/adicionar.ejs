@@ -1,0 +1,38 @@
+<!---
+incluindo o conteúdo do cabeçalho que é comum a todas as páginas
+--->
+<%- include ../layouts/header.ejs %>	
+
+<% if (messages.error) { %>
+	<p style="color:red"><%- messages.error %></p>
+<% } %>
+
+<% if (messages.success) { %>
+	<p style="color:green"><%- messages.success %></p>
+<% } %>
+
+<form action="/users/adicionar" method="post" name="form1">
+	<table width="25%" border="0">
+		<tr> 
+			<td>Título:</td>
+			<td><input type="text" name="titulo" id="titulo" value="<%= titulo %>" placeholder="titulo"/></td>
+		</tr>
+		<tr> 
+			<td>Data do Classificado:</td>
+			<td><input type="text" name="dataClas" value="<%= dataClas %>" placeholder="xx.xx.xxxx"/></td>
+		</tr>
+		<tr> 
+			<td>Descrição:</td>
+			<td><input type="text" name="descricao" value="<%= descricao %>" placeholder="descrição"/></td>
+		</tr>
+		<tr> 
+			<td></td>
+			<td><input type="submit" name="Submit" value="Adicionar" /></td>
+		</tr>
+	</table>
+</form>
+
+<!--
+incluindo o conteúdo do rodapé que é comum a todas as páginas
+-->
+<%- include ../layouts/footer.ejs %>

@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title><%= title %></title>
+	</head>
+	<style>
+		.btnInicio, .btnAdd, .btnList{
+			width: 100px;
+			height: 50px;
+			color: #eee;
+			background: rgb(157, 157, 158);
+			font-size: 20px;
+			text-decoration: none;
+			font-family: monospace;
+			padding: 5px;
+		}
+		
+	</style>
+	<body>
+		<div>
+			<a class="btnInicio" href="/">Inicio</a> | 
+			<a class="btnAdd" href="/users/adicionar">Adicionar Novo</a> | 
+			<a class="btnList" href="/users">Lista</a>
+		</div>	
+		<h1><%= title %></h1>
